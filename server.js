@@ -13,7 +13,5 @@ router.get("/", (req, res) => {
 });
 
 
-app.use('/.netlify/express/server', router);  // path must route to lambda (express/server.js)
-
 module.exports = app;
 module.exports.handler = serverless(app);
