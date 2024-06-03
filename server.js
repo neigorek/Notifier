@@ -1,4 +1,5 @@
 const express = require('express');
+const {subscribeToNewTransactions} = require("./notifier");
 const app = express();
 const router = express.Router();
 
@@ -9,7 +10,8 @@ app.listen(PORT, () => {
 
 router.get("/", (req, res) => {
     res.send("App is running..");
+    subscribeToNewTransactions();
 });
 
-
+app.use(router);
 module.exports = app;
