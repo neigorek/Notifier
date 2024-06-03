@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 var { Web3 } = require("web3");
-var provider = "wss://mainnet.infura.io/ws/v3/d84fcf1869e64029beaf2a1e13d1428f";
+var provider = "wss://mainnet.infura.io/ws/v3/";
 var web3Provider = new Web3.providers.WebsocketProvider(provider);
 var web3 = new Web3(web3Provider);
 // Подключение к узлу Ethereum
